@@ -1,3 +1,49 @@
+@keyframes rotation {
+	from {
+		-ms-transform: rotate(0deg); /* IE 9 */
+		-webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+		transform: rotate(0deg);
+		}
+	to {
+		-ms-transform: rotate(360deg); /* IE 9 */
+		-webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+		transform: rotate(360deg);
+		}
+}
+
+@keyframes deformation {
+	from {
+		#-ms-transform: matrix(1,1,1,1,1,1); /* IE 9 */
+		# -webkit-transform: matrix(1,1,1,1,1,1); /* Chrome, Safari, Opera */
+		top: -100%;
+		letter-spacing: 5px;
+	}
+	to {
+		# -ms-transform: mmatrix(-1.586,0.3,0.5,01.586,0,-600); /* IE 9 */
+		# -webkit-transform: matrix(0,0,0.5,0.32,20,10); /* Chrome, Safari, Opera */
+		top: 100%;
+		letter-spacing: 10px;
+	}
+}
+
+@keyframes frissons {
+	from {
+		letter-spacing: 5px;
+	}
+	to {
+		letter-spacing: 5.1px;
+	}
+}
+
+@keyframes ecartelement {
+	from {
+		line-height: 1em;
+	}
+	to {
+		line-height: 2em;
+	}
+}
+
 body {
 	color: purple;
 	background-color: yellow;
@@ -24,4 +70,37 @@ div {
 
 .small {
 	letter-spacing: -2px;
+}
+
+
+.dervish, div:nth-of-type(2) {
+	animation-name: rotation;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+div:nth-of-type(2) {
+	animation-duration: 4s;
+}
+
+.yoga {
+	animation-name: deformation;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;	
+}
+
+.friture {
+	animation-name: frissons;
+	animation-iteration-count: infinite;
+	animation-duration: 0.1s;
+	animation-timing-function: linear;
+	animation-direction: alternate;
+}
+
+.accordeon {
+	animation-name: ecartelement;
+	animation-iteration-count: infinite;
+	animation-duration: 1s;
 }
