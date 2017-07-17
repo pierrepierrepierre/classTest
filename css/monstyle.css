@@ -136,3 +136,7 @@ div:nth-of-type(2) {
 		animation-duration: 0.5s;
 		animation-timing-function: ease-in;
 }
+
+body:hover *, body:hover {
+	animation-duration: 50s;
+}
